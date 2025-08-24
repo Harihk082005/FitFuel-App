@@ -23,4 +23,5 @@ jobs:
       with:
         context: .
         push: true
-        tags: harihk27/fitfuel:latest
+        tags: |
+          harihk27/fitfuel:latest
