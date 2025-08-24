@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FitFuel App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="home-page">
+  <div class="container">
+    <h1>Welcome to FitFuel App</h1>
+    <p>Enter your weight to get a personalized diet plan:</p>
+    
+    <form method="POST" action="/">
+      <input type="number" name="weight" placeholder="Enter your weight (kg)" required>
+      <button type="submit">Get Diet Plan</button>
+    </form>
+
+    {% if error %}
+    <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    <footer>
+      <p>Project done by <strong>HariKrishna R</strong></p>
+    </footer>
+  </div>
+</body>
+</html>
